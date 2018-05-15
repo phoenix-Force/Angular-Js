@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="angular.min.js"></script>
+		<script src="angular-route.min.js"></script>
+       
+		<style>
+			.s_srchbar{
+				margin-left: 0px;
+				float: left;
+				width:100%;
+				height:60px;
+			}
+			.s_pic{
+				float:left;
+				width:85%;
+				height: 600px;
+				background: transparent;
+				
+				
+			}
+			.s_list{
+				float:left;
+				width:15%;
+				height:600px;
+				background-color: rgba(0,0,0,.8);
+				color:black;
+			}
+			.s_southkol{
+				float: left;
+				margin-left: 30%;
+				width: 30%;
+				height: 100%;
+				padding-bottom: 15px;
+		
+			}
+			.s_srch{
+				margin-right: 15%;
+				float: right;
+				width: 20%;
+				height: 100%;
+				padding-top: 30px;
+			}
+			.s_table{
+				width: 100%;
+				height: 100%;
+			}
+			td,tr{
+				border: 1px solid blue;
+				border-collapse: collapse;
+				text-align: center;
+				font-size: 15px;
+				font-family: verdana;
+                background-color:pink;
+                color: blue;
+			}
+            .fa {
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+body{
+    background-color: darkgray;
+    background-size: cover;
+    font-family:cursive;
+    color:black;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: 15px;
+            }
+            h1{
+    text-align: center;
+    text-decoration-style: wavy;
+}
+		</style>
+	</head>
+	<body ng-app="myApp" ng-controller="con1">
+		
+        
+        <div class="s_srchbar">
+			<div class="s_southkol">
+				<h1>SOUTH KOLKATA</h1>
+			</div>
+			<div class="s_srch">
+				<input type="text" placeholder="Search">
+				<input type="button" value="Search">
+			</div>
+		</div>
+		<div class="s_pic" ng-view>
+			
+		</div>
+		<div class="s_list">
+			<table class="s_table">
+			<th>Places</th>
+				<tr ng-repeat="x in s_list"><td><a href="#!{{x.name}}">{{x.name}}</a></td></tr>
+			</table>
+		</div>
+	
+	<script>
+		var app = angular.module("myApp", ["ngRoute"]);
+			app.config(function($routeProvider) {
+			$routeProvider
+			.when("/TOURIST PLACES", {
+				template : "<div><h1>TOLLYGUNGE CLUB</h1><img ng-src=\"img/club.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><p style=\"padding-left:10px;margin-left:20px;\">Tollygunge Club is one of the oldest clubs in South Kolkata which is known for its golf course, horse riding facilities and much more. Birla Industrial & Technological Museum is situated on 19A, Gurusaday Road, Kolkata - 700 019. The museum is known for its artifacts shows, events and activities that are chiefly popular with school-going children.</br>The Tollygunge Club, Kolkata, is the only Country Club of its kind in India and ranked amongst the top 20 Clubs of the world. It is spread over a hundred acres with a Club House that is over 220 years old. The Tollygunge Club is located in the southern part of Kolkata, only 9 Kms from the centre of the city.</br>The club has 67 newly furbished, air-conditioned suites and residential rooms for Members and their guests, each with an attached bath, while separate conference and banqueting facilities offer a choice of venues accommodating between 25 and 600 people. There is abundant provision for parking. A country club that is truly an oasis of greenery and quietude in the midst of Kolkata's bustling southern residential district, the hallmark of Tolly is its warm, leisurely and friendly atmosphere. </p></div><div><h1>RABINDRA SAROBAR LAKE</h1><img ng-src=\"img/Lake.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><p style=\"padding-left:10px;margin-left:20px;\">Rabindra Sarobar (previously known as Dhakuria Lake) is an artificial lake in south Kolkata in the Indian state of West Bengal.</br>It is an open lake area which comprises of boating clubs, an open air theatre and several eatery shops.</br>The name also refers to the area surrounding the lake. It is flanked by Southern Avenue to the North, Rashbehari Avenue(Russa Road) to the West, Dhakuria to the East and the Kolkata Suburban Railway tracks to the south.</br>Rabindra Sarovar is 30 km away from Dum Dum airport and 12 km from the Howrah railway station.The area is served by the Rabindra Sarobar station of the Kolkata Metro and Lake Gardens and the Tollygunge station of the Kolkata suburban railway (Budge Budge section). It is one of the two points where the two railway systems interface (the other being Dum Dum).</p></div><div><h1>CIMA ART GALLERY</h1><img ng-src=\"img/art.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><p style=\"padding-left:10px;margin-left:20px;\"><p>CIMA Art Gallery is situated along the Sunny Towers which is based at 43 Ashutosh Chowdhury Avenue, Kolkata-700019.\"The Centre of International Modern Art\" is an excellent museum that house modern and contemporary art works.</p></div><div><h1>NATIONAL LIBRARY</h1><img ng-src=\"img/Lib.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><p style=\"padding-left:10px;margin-left:20px;\"><p>The National Library, India is the largest library in the country. It is an institution of national importance under the Ministry of Culture, Government of India. The library is designated to collect, disseminate and preserve the printed material produced in the country. The library is situated on a scenic 30 acres Belvedere Estate, in Kolkata (formerly Calcutta).</br>The National Library is located on Belvedere Road in Alipore, Calcutta. It is open between 9 am and 8 pm on all working days and between 9.30 am and 6.00 pm on Saturdays, Sundays and Government of India holidays.[2]It remains closed on theree national holidays, 26 January *(Republic Day), 15 August (Independence Day) and 2 October (Birthday of Mahatma Gandhi).</br>Access to the National Library main reading room (Bhasha Bhavan) is strictly controlled. The visitors need to have an approved Reader's pass to reading hall. For that they need to fill in an application form (available on the National Library website) and get it attested by a Government Gazetted officer. The reader's passes are issued only between 11.00 am and 1.00 pm, and between 3.00 pm and 4.00 pm, from Monday to Friday, excluding a string of National and State holiday.</p></div><div><h1>ALIPORE ZOO ( ZOOLOGICAL GARDENS OF KOLKATA)</h1><img ng-src=\"img/zoo.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><p style=\"padding-left:10px;margin-left:20px;\"><p>Alipore Zoo is one of the famous zoos in Kolkata. It is one of the tourist attractions in Kolkata which houses animals and birds that delight many school children.</br>The Zoological Garden, Alipore (also informally called the Alipore Zoo or Calcutta Zoo) is India's oldest formally stated zoological park (as opposed to royal and British menageries) and a big tourist attraction in Kolkata, West Bengal. It has been open as a zoo since 1876, and covers 18.81 ha (46.5 acres). It is probably best known as the home of the now expired Aldabra giant tortoise Adwaita, who was reputed to have been over 250 years old when he died in 2006. It is also home to one of the few captive breeding projects involving the Manipur brow-antlered deer. One of the most popular tourist attractions in Kolkata, it draws huge crowds during the winter season, especially during December and January. The highest attendance till date was on December 25, 2016 with 81,000 visitors.</br> The zoo has around 1,266 individuals and about 108 species.</p></div>"
+			})
+                
+                .when("/TEMPLES", {
+				template : "<div><h1>BIRLA TEMPLE</h1><img ng-src=\"img/birla.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><p style=\"padding-left:10px;margin-left:20px;\"><p>Birla Mandir in Kolkata, India, is a Hindu temple on Asutosh Chowdhury Avenue, Ballygunge, built by the industrialist Birla family.[1] This temple is open in the morning from 5.30 A.M. to 11 A.M. and in the evening from 4 .30 P.M. to 9 P.M. On Janmashtami, the birthday of Krishna, devotees come from far away places to pay their respect to the deities. •  The main temple houses statues of deities Krishna and Radha.</br>•  The left side temple shikhar (dome) houses goddess Durga, the Hindu goddess of Shakti, the power. </br>•  The right side dome of the temple houses Shiva in meditation mode. </br>•  Spread on 44 kathas of land, this temple built of white marble bears resemblance to the renowned Lingaraj Temple of Bhubaneswar. Birla Mandir also showcases pictorial depiction of scriptures of Bhagavad Gita in its stone engravings and some intricate Rajasthani temple architecture. Designed by the architect Nomi Bose.</br> There are several parks near Birla Temple like the Queen's Park and the Sunny Park which are close to the Birla Temple.</p></div><div><h1>KALIGHAT TEMPLE</h1><img ng-src=\"img/kalighat.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><p style=\"padding-left:10px;margin-left:20px;\"><p>Kalighat Temple is one of the popular destinations for deity lovers which, is situated in South Kolkata.</br>Kalighat Kali Temple is a Hindu temple in West Bengal, India dedicated to the Hindu goddess Kali.[1] It is one of the 51 Shakti Peethas.</br>Kalighat was a Ghat (landing stage) sacred to Kali on the old course of the Hooghly river (Bhāgirathi) in the city of Calcutta. The name Calcutta is said to have been derived from the word Kalighat. The river over a period of time has moved away from the temple. The temple is now on the banks of a small canal called Adi Ganga which connects to the Hoogly. The Adi Ganga was the original course of the river Hoogly. Hence the name Adi (original) Ganga.</br>Kalighat is regarded as one of the 51 Shakti Peethas of India, where the various parts of Sati's body are said to have fallen, in the course of Shiva's Rudra Tandava. Kalighat represents the site where the toes of the right foot of Dakshayani or Sati fell.</br>Kalighat is also associated with the worship offered to Kali by a Dasanami Monk by name Chowranga Giri, and the Chowringee area of Calcutta is said to have been named after him.</p></div>"
+                
+            })
+                 
+                .when("/MALLS", {
+				template :"<div><h1>SOUTH CITY MALL</h1><img ng-src=\"img/south.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><p style=\"padding-left:10px;margin-left:20px;\"><p>South City Mall is a shopping mall in south Kolkata, India. Located on Prince Anwar Shah Road (where the erstwhile Usha Industries factories and staff quarters were situated) it has been open since 16 January 2008.[1] It has a Gross Lease-able Area of 1,000,000 sq ft (93,000 m2) and parking for 2,500 vehicles.The mall was designed by retail specialist ICS Bentel Associates. Anchored by major stores like Pantaloons, Spencer's Retail and Shoppers Stop, there are also 134 other stores, a food court on the top floor and a INOX multiplex.</p></div><div><h1>ACROPOLIS MALL</h1><img ng-src=\"img/acropolis.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><p style=\"padding-left:10px;margin-left:20px;\"><p>All stores, brands, restaurants, cinemas, offers, events, entertainment, sales in Acropolis Mall Kolkata. Acropolis will be an iconic architectural masterpiece with an elegant elevation covered with a glass facade spread over approximately 3, 00,000 sft. The shopping Mall is all set to have the right retail mix layered with various kinds of retail zones, and will also house a four screen Multiplex, food Courts, Fine Dining restaurants, Family and Children entertainment areas and more. Acropolis Mall opens on 25th September 2015 with brands like Cinepolis, Shoppers Stop, Vero Moda, Chilis, Marks & Spencer, Sunglass Hut, Asia Kitchen, Being Human, The Body Shop, KFC, Mainland China, Peter England, Mia, Jack and Jones, Fusion Beats, AND, Global Desi, W for Woman, Jashn, Parcos, Wildcraft, Dominos, Titan World, Woodland, and more. The Acropolis Mall will spread across 5 floors totaling to a gross leasable area of 2, 88,000 sft. We are in negotiation with various brands ranging from apparel, footwear, fashion and accessories and more. Three basement levels for parking are designed to accommodate 650 cars at a time. The mall will house two anchor stores of 45,000sft & 15,000sft each. All floors will be well connected by way of escalators and modern high speed passenger elevators. Over and above all these, visitors will have multiple May I help you booths and a user friendly signage system across all levels for ready guidance. For Acropolis the primary target catchments area are Gariahat, Ballygunj, Picnic Gardens, Garcha, Old Bullygunj Rash Behari Avenue, Jodhpur Park, Southern Avenue, Golpark, Kasba and Tollygunge which are just 5 to 20 minutes of driving distance and house eminent personalities alongside High Income Group people. Acropolis- Presenting Fantastic Retail opportunities in Kolkata. 7 reasons why ACROPOLIS should be in your Retail Expansion Road-Map - On R. B. Connector, South Kolkata, having fantastic catchment and close to established Retail Areas. - Promoted by Merlin with the professional expertise of managing Mega Malls like South City & Homeland in Kolkata. - Secured mechanised basement parking with approx. 600 slots. - Hawk-eye exterior visibility. Acropolis is coming up in a corner plot. A unique double frontage. Seamless connectivity. - Scientific tenant mix to generate high footfall, design elements skewed towards a clear line of vision for all outlets. - Overall easy access to all retail floors through four strategically placed escalators and elevators. - Treated air, double glazed glass facade, efficient water and waste management, 24 X 7 power and high security Acropolis Mall Location - High end residential areas of Ballygunge, Bhowanipore, Golf Green, Southern Avenue, Gariahat and Jadavpur within 10 mins.</p></div><div><h1>QUEST MALL</h1><img ng-src=\"img/quest.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><p style=\"padding-left:10px;margin-left:20px;\"><p>Quest (previously known as Spencers Galleria) is one of the largest shopping mall in Kolkata, India. Located in Park Circus, the mall was inaugurated on 30 September 2013. With a shopping area of 730,000 sq ft (68,000 m2) and parking for 1,300 vehicle. The mall has the largest apparel store in the city,[citation needed] Lifestyle, with a total area of 100,000 sq ft (9,300 m2). It also houses a six-screen Insignia class multiplex INOX cinema, Spencers Hyper Market and Starmark bookstore in the basement.</p></div>"
+            
+            
+            })
+                             
+                .when("/HOTELS", {
+				template :"<div><h1>TAJ BENGAL</h1><img ng-src=\"img/taj.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><p style=\"padding-left:10px;margin-left:20px;\"><p>Address:34 - B, Belvedere Road Alipore </br>Kolkata - 700 027 West Bengal (India)</br>Phone: + (91) - (33)- 22233939</br>Fax: + (91) - (33)- 22231766 / 8805</p></div><div><h1>PARK PALACE</h1><img ng-src=\"img/park_palace_hotel.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><p style=\"padding-left:10px;margin-left:20px;\"><p>Address:49/2, Gariahat Road </br>Kolkata - 700 019 West Bengal (India) </br>Phone: + (91) - (33) - 24619108/11, 24619544/ 9545/ 8582 </br>Fax: + (91) - (33) - 24618049 </p></div>"
+            })
+			.otherwise({
+				template :"<p>South Kolkata is one of the prime district of Kolkata, which is known for its lush green parks, oldest golf club, ancient temples, gardens and hospitals. South Kolkata is a happening destination as far as shopping is concerned. One must visit the Inox Forum, Gariahat Pantaloons, and South City Mall near Tollygunge which are all within the precincts of South Kolkata districts. Enjoy sumptuous meals at excellent restaurants of South Kolkata like Oh Calcutta, Raj Restaurant, China Town that offers mouthwatering delicacies. South Kolkata is truly happening destinations that are dotted with attractive sites.<h3> Below are the areas that fall under South Kolkata :</h3><li>1.	Tollygunge</li><li>2.	Alipur</li> <li>3.	Ballygunge</li> <li>4.	Jadavpur</li><li>5.	Jodhpur Park</li><li>6.	Kalighat</li><li>7.	Kasba</li><li>8.	Garia</li></p>"
+			});
+				
+		});
+		function mycon ($scope){
+		$scope.s_list=[{name:"TOURIST PLACES",like:30},				 
+					   {name:"TEMPLES",like:30},
+					   {name:"MALLS",like:30},
+					   {name:"HOTELS",like:30}];
+			
+		
+       };
+
+		app.controller("con1",mycon);
+		
+	
+	</script>
+    </body>
+</html>

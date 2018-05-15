@@ -1,0 +1,123 @@
+<html>
+<head>
+    <style>
+    body {
+         background: url("bg_image.jpg") no-repeat center fixed;
+         background-size: cover;
+        }
+        
+        .s_srchbar{
+				margin-right: 0px;
+				float: right;
+				width:100%;
+				height:60px;
+			}
+			.s_pic{
+				float:right;
+				width:85%;
+				height: 600px;
+				background: transparent;
+				
+				
+			}
+			.s_list{
+				float: right;
+				width:15%;
+				height:600px;
+				background-color: rgba(0,0,0,.8);
+				color:white;
+			}
+			.s_southkol{
+				float: right;
+				margin-right: 30%;
+				width: 30%;
+				height: 100%;
+				padding-bottom: 15px;
+		
+			}
+			
+			.s_table{
+				width: 100%;
+				height: 100%;
+			}
+			td,tr{
+				border: 1px solid black;
+				border-collapse: collapse;
+				text-align: center;
+				font-size: 15px;
+				font-family: verdana;
+			}
+         }
+</style>
+    <title>North Zone</title>
+    <script src="angular.min.js"></script>
+    <script src="angular-route.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+   
+    <h1 style="color:solid black;font-family:cursive"><marquee>A wonderful way to explore North Kolkata </marquee></h1><br/><br/>
+    
+    <u><h1>North Zone:</h1></u>
+                <p style="font-size: 20px">North Kolkata is where old kolkata resides,in it's full glory.The charming district is dotted with closely set lanes and hundreds of old world buildings.Comprising of areas like Belgachhia,Shyambazar,Chitpur,Shobhabazar,Maniktala,Jora sanko,College street etc,the area acts as a major commercial as well as a residential centre of the town.Also situated here is the Sealdah station,one of largest train hubs in India, and the newly build Kolkata station </p>
+</head>
+   <body ng-app="myApp" ng-controller="con1">
+		<div class="s_srchbar">
+			<div class="s_southkol">
+				
+			</div>
+			
+		</div>
+		<div class="s_pic" ng-view>
+			
+		</div>
+		<div class="s_list">
+			<table class="s_table">
+			<th>Visiting Places:</th>
+				<tr ng-repeat="x in s_list"><td><a href="#!{{x.name}}">{{x.name}}</a></td></tr>
+                <th>Temples:</th>
+                <tr></tr>
+			</table>
+		</div>
+       
+       
+       
+       <script>
+       
+       var app = angular.module("myApp", ["ngRoute"]);
+			app.config(function($routeProvider) {
+			$routeProvider
+			.when("/Victoria Memorial", {
+				template : "<h1 style=\"text-align:center;\"><u>Victoria Memorial</u></h1><h3 style=\"padding-left:10px;margin-left:20px;\">The Victoria Memorial is a large marble building in Kolkata, West Bengal, India, which was built between 1906 and 1921. It is dedicated to the memory of Queen Victoria (1819–1901) and is now a museum and tourist destination under the auspices of the Ministry of Culture. The memorial lies on the maidan (grounds) by the bank of the Hooghly River, near Jawaharlal Nehru road.</h3><img ng-src=\"img/nk1.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><br/><h1>Opening Time:</h1><h3>Garden: 5:30 AM to 6:15 PM Gallery: 10:00 AM to 5:00 PM every day, except Monday and national holidays.</h3><h1>Visit Cost:</h1><h3>Garden: INR 10 Museum - Indians: INR 20 Foreigners: INR 200 School children up to 12 years age in uniform and army personnel in uniform:Free</h3>"
+			})
+                
+                .when("/Jorasanko", {
+				template : "<h1 style=\"text-align:center;\"><u>Jorasanko</u></h1><h3 style=\"padding-left:10px;margin-left:20px;\">Jorasanko is a neighbourhood of north Kolkata,in Kolkata district, West Bengal, India. It is so called because of the two(jora) wooden or bamboo bridges(sanko) that spanned a small stream at this point.</h3><br/><h1>Opening timings for Jorasanko Thakur Bari:</h1><h3>Tue, Wed, Fri, Sat, Sun 6:00 PM - 6:40 PM (Bengali) (light & sound show from november to january)<br/>7:00 PM - 7:40 PM (English) (light & sound show from november to january)<br/>7:00 PM - 7:40 PM (Bengali) (light & sound show from february to june)<br/>8:00 PM - 8:40 PM (English) (light & sound show from february to june)</h3><img ng-src=\"img/chri2.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\">"
+			})
+                
+                 .when("/Indian Museum", {
+				template : "<h1 style=\"text-align:center;\"><u>Indian Museum</u></h1><h3 style=\"padding-left:10px;margin-left:20px;\">The history of the origin and the growth of the Indian Museum is one of the remarkable events towards the development of heritage and culture of India.Founded in 1814 at the cradle of the Asiatic Society of Bengal (at the present building of the Asiatic Society, 1 Park Street, Kolkata), Indian Museum is the earliest and the largest multipurpose Museum not only in the Indian subcontinent but also in the Asia-Pacific region of the world.With the foundation of Indian Museum in 1814, the Museum movement started rolling in India and through the years from then, got a new fillip and great momentum. Since then, it has so magnificently developed and culminated into the fruitful existence of more than 400 museums in the country.The movement, which was started in 1814, in fact was the beginning of a significant epoch initiating the socio-cultural and scientific achievements of the country. It is otherwise considered as the beginning of the modernity and the end of mediaeval era.</h3><br/><h1>Opening timings for </h1><h3></h3><img ng-src=\"img/chri2.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\">"
+			})
+                  .when("/Marble Palace", {
+				template : "<h1 style=\"text-align:center;\"><u>Marble Palace</u></h1><h3 style=\"padding-left:10px;margin-left:20px;\">Marble Palace is a palatial nineteenth-century mansion in North Kolkata. It is located at 46, Muktaram Babu Street, Kolkata 700007. It is one of the best-preserved and most elegant houses of nineteenth-century Calcutta. The mansion is famous for its marble walls, floors, and sculptures, from which it derives its name.</h3><h1>Location:</h1><h3>645, James Long Sarani, Das Para Road, Thakurpukur, Kolkata - 700063 West </h3><br/><h1>Opening time of Marble Palace:</h1><h3>BengalOpen from 10:00 till 15:00 every day except Mondays and Thursdays</h3><img ng-src=\"img/chri2.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\">"
+			})
+                
+			.otherwise({
+				template : "<h1>Nothing</h1><p>Nothing has been selected</p>"
+			});
+				
+		});
+		function mycon ($scope){
+		$scope.s_list=[{name:"Victoria Memorial",like:30},				 
+					   {name:"Jorasanko",like:30},
+					   {name:"Indian Museum",like:30},
+					   {name:"Marble Palace",like:30},
+					   {name:"name5",like:30}];
+			
+		};
+		app.controller("con1",mycon);
+       
+       
+       </script>
+    </body>
+</html>

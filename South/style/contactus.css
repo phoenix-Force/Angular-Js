@@ -1,0 +1,29 @@
+.sec{
+	background-image: url(../image/Globe-contact.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+#contact{
+	padding-top:70px;
+	float:left;
+	height:350px;
+	width:100%;
+	margin-left:0px;
+	color:firebrick;
+	font-size: 20px;
+	font-family:serif; 
+	text-align: center;
+	font-weight: bold;
+}
+#contact>p{
+	
+	color:white;
+	font-size: 18px;
+	font-family: sans-serif;
+	
+}
+#contact>label{
+	color:white;
+	font-size: 20px;
+	font-family: serif;
+}

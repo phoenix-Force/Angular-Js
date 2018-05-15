@@ -1,0 +1,46 @@
+.gal{
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+
+}
+body{
+    background-color: burlywood;
+    color:darkslategrey;
+    font-weight: bold;
+}
+
+
+
+nav {
+  position:relative;
+  display:inline-block;
+  font-size:14px;
+  font-weight:900;
+}
+.nav-list {
+  
+}
+.nav-item {
+  float:left;
+  *display:inline;
+  zoom:1;
+}
+.nav-item a {
+  display:block;
+  padding:15px 20px;
+  color:#FFF;
+  background:#34495E;
+}
+.nav-item:first-child a {
+  border-radius:5px 0 0 5px;
+}
+.nav-item:last-child a {
+  border-radius:0 5px 5px 0;
+}
+.nav-item a:hover {
+  background:#2C3E50;
+}
+
+
+

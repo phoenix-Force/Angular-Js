@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head >
+        <meta charset="utf-8">
+		<title>Détour Kolkata</title>
+		<link rel="icon" href="../image/logoicon.ico" typr="image/x-ico">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../style/model.css">
+        <link rel="stylesheet" type="text/css" href="../style/styles.css">
+        <link rel="stylesheet" type="text/css" href="../style/foot.css">
+        <link rel="stylesheet" type="text/css" href="../style/slide.css">
+        <link rel="stylesheet" type="text/css" href="../style/log.css">
+        <link rel="stylesheet" type='text/css' href="../style/bootstrap.min.css">
+		<style>
+			#menus>ul li{
+				float:right;
+			}
+			#menus{
+				top:-15px;
+			}
+		</style>
+    </head>
+    <body ng-app="mod1" ng-controller="con1" id="bdy">
+        
+        <div id="nav">
+                <div id="nv" style="float:left;">
+                   
+                        <abbr title="Home Page"><a href="final.html"><img class="logoclass" src="../image/LOGO.png" width="300px" height="130px" style=" position:absolute;padding-top: 0px; margin-top:0px; overflow: hidden;top:-15px; left:-60px;"></a></abbr>
+					
+				</div>
+					<div id="homologo"style="float:left;">
+						<a href="final.html"><img src="../image/home.png" width="50px" height="50px" style="padding-top: 5px; position:relative; text-align: center; margin-left:200px"></a>
+                    
+			</div>
+			<div id="menus" style="position: relative;">
+                    <ul ng-repeat="x in mnubar">
+                        <li><a href="{{x.page}}">{{x.mnu}}</a> <!--</li>-->
+                       <!-- <li><a href="">South</a></li>
+                        <li><a href="">Tourist</a></li>
+                        <li><a href="">Gallery</a>-->
+                            <ul ng-repeat="y in x.submnu">
+                                <li>
+                                    <a href="{{y.page}}">{{y.name}}</a>
+                                </li>
+                               <!-- <li><a href="">Audio</a> </li>
+                                <li><a href="">Video</a> </li>-->
+                            </ul>
+                        </li>
+                       <!-- <li><a href="">Food</a>
+                            <ul>
+                                <li><a href="">Resturant</a></li>
+                                <li><a href="">StreetFood</a></li>
+                                <li><a href="">Resturant</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Culture</a></li>-->
+                     </ul>
+                </div>
+            </div>
+        <div>
+        <div id="logslide">
+            <div id="frm">
+                <div id="container">
+                    <div class="logbox">
+                        <img ng-src="../image/login.png" height="100px" width="100px" id="logimage" alt="logimage">
+                        <h2 class="logh" >Login Here</h2>
+                        <form>
+                            <p class="logp" >UserName</p>
+                            <input required type="text" id="Username" placeholder="User Name">
+                            <p class="logp">Password</p>
+                            <input required type="password"  id="pass" placeholder="EnterPassword">
+                            <input type="Submit" onclick="check()">
+                            <a herf="" style="color:blue;">Forgot password</a><br>
+                            <input type='button' value="Sign Up"  >
+                        </form>
+                    </div> 
+                </div>
+            </div>
+            <div id="slide" ng-include="slideshow" > <!--ng-include="slideshow"-->
+            </div>
+        </div>
+        
+        <div id="footer">
+            <div id="menu">
+				<ul ng-repeat="menulist in footermenu">
+					<li><a href={{menulist.page}}>{{menulist.nme}}</a></li>
+				</ul>
+				
+				
+               <!-- <ul>
+                    <li><a href="final.html">Home</a></li>
+                    <li><a>Help</a></li>
+                    <li><a href="AboutUspage.html">About Us</a></li>
+                    <li><a href="http://www.ardentcollaborations.com" target="_blank">About Ardent</a></li>
+                </ul>-->
+            </div>
+            <div id="back">
+                <p id="feedp">Feedback</p>
+                Name*<input type="text" id="msgname"><br>
+                Email*<input type="email" id="msgmail"><br>
+                Message*<textarea cols="33" rows="2" id="msg"></textarea><br>
+                <input type="submit" id="btn" value="Submit" onclick="put()">
+            </div>
+            <div id="about">
+                <h2>Contact Us</h2>
+                <h5>Like Us / Join Us</h5>
+                <div id="media">
+                    <div class="box" id="facebook"><a href="https://www.facebook.com/login" target="_blank">&#62220;</a></div>
+                    <div class="box" id="twiter"><a href="https://twitter.com/login">&#62217;</a></div>
+                    <div class="box" id="google"><a href="https://plus.google.com/117302453758282711096">&#62223;</a></div>
+                    <div class="box" id="insta"><a href="https://www.instagram.com/?hl=en">&#62253;</a></div>
+                
+                </div>
+            </div>
+            <div id="mark">
+                <marquee style="font-family:sans-serif;font-size:25;font-weight: 100;padding-top: 20px;">Ardent ComputerTech,BF 88,AngularJs</marquee>
+            </div>
+        </div>
+     </div>
+    </body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<script src="../script/angular.min.js"></script>
+	<script src="../script/signupOpen.js"></script>
+	<script src="../script/menu.js"></script>
+	<script src='../script/bootstrap.min.js'></script>
+	<script src="../script/validate.js"></script>
+	<script src="../script/feedbackmsg.js"></script>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<style>
+			.signbox{
+                float:left;
+                padding:50px 40px;
+                margin-left: 2%;
+                margin-top: 3%;
+                position: absolute;
+                height:411px;
+                width:350px;
+                box-sizing: border-box;
+                background-color: rgba(0,0,0,.5);
+            }
+           .signbox>#signupImg{
+                position: absolute;
+                width:100px;
+                height: 100px;
+                border-radius: 50%;
+                overflow: hidden;
+                top:-40px;
+                left:calc(50% - 50px);
+            }
+            h2{
+                text-align: center;
+                color:white;
+            }
+            p{
+                margin: 0px;
+                padding: 0px;
+                font-weight: bold;
+                color:white;
+            }
+            .signbox input{
+                width:100%;
+                margin-bottom: 20px;
+            }
+            .signbox input[type="text"],
+            .signbox input[type="password"],
+            .signbox input[type="number"],
+            .signbox input[type="email"]{
+                border:none;
+                border-bottom: 1px solid #fff;
+                background:transparent;
+                outline: none;
+                height:25px;
+                color:white;
+
+            }
+                ::placeholder{
+                    color:rgba(255,255,255,.5);
+                }
+              .signbox input[type="submit"]{
+                background-color: #2196f3;
+                border:none;
+                margin: 0px;
+                height:30px;
+                font-size: 16px;
+                color:white;
+                cursor: pointer;
+                border-radius: 20px;
+            }
+
+            .signbox input[type="submit"]:hover{
+                background-color: forestgreen;
+                opacity: .5;
+            }
+            h5{
+                text-align: center;
+                color:white;
+            }
+            #extra{
+                height:411px;
+                width:324px;
+                float:left;
+                position: relative;
+                background-color: red;
+                margin-left:28%;
+                margin-top: 3%;
+            }
+		</style>
+    </head>
+    <body>
+        <div class="signbox">
+            <h2>SignUp</h2>
+            <img id="signupImg"src="../image/login.png">
+            <form>
+                <p>Name</p>
+                <input required type="text" id='name'>
+				<p>Phone Number</p>
+                <input required type="number" name="ph" maxlength="10" min="0" id="phnumber">
+                <p>Email</p>
+                <input required type="email" id='email'>
+                <p>Password</p>
+                <input required type="password" id="pass">
+                <input type="submit" onclick="openid()" >
+            </form>
+        </div>
+       
+    </body>
+	<script>
+		function openid(){
+			var username=document.getElementById("name").value;
+			var ph=document.getElementById("phnumber").Value;
+			var mailid=document.getElementById("email").value;
+			var password=document.getElementById("pass").value;
+			alert("You SignUp SuccessFully");
+			alert(ph);
+			
+			
+		}
+	</script>
+</html>

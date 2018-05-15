@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head >
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../style/model.css">
+        <link rel="stylesheet" type="text/css" href="../style/styles.css">
+        <link rel="stylesheet" type="text/css" href="../style/foot.css">
+		<link rel="stylesheet" type="text/css" href="../style/aboutus.css">
+		<link rel="stylesheet" type="text/css" href="../style/food.css">
+        <script src="../script/angular.min.js"></script>
+        <script src="../script/menu.js"></script>
+		<style>
+			#menus>ul li{
+				float:right;
+			}
+			#menus{
+				top:-15px;
+			}
+		</style>
+    </head>
+    <body ng-app="mod1" ng-controller="con1" id="bdy">
+        
+        <div id="nav">
+                <div id="nv" style="float:left;">
+                   
+                        <abbr title="Home Page"><a href="final.html"><img class="logoclass" src="../image/LOGO.png" width="300px" height="130px" style=" position:absolute;padding-top: 0px; margin-top:0px; overflow: hidden;top:-15px; left:-60px;"></a></abbr>
+					
+				</div>
+					<div id="homologo"style="float:left;">
+						<a href="final.html"><img src="../image/home.png" width="50px" height="50px" style="padding-top: 5px; position:relative; text-align: center; margin-left:200px"></a>
+                    
+			</div>
+			<div id="menus" style="position: relative;">
+                    <ul ng-repeat="x in mnubar">
+                        <li><a href="">{{x.mnu}}</a> <!--</li>-->
+                       <!-- <li><a href="">South</a></li>
+                        <li><a href="">Tourist</a></li>
+                        <li><a href="">Gallery</a>-->
+                            <ul ng-repeat="y in x.submnu">
+                                <li>
+                                    <a href="">{{y.name}}</a>
+                                </li>
+                               <!-- <li><a href="">Audio</a> </li>
+                                <li><a href="">Video</a> </li>-->
+                            </ul>
+                        </li>
+                       <!-- <li><a href="">Food</a>
+                            <ul>
+                                <li><a href="">Resturant</a></li>
+                                <li><a href="">StreetFood</a></li>
+                                <li><a href="">Resturant</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Culture</a></li>-->
+                     </ul>
+                </div>
+            </div>
+        <div>
+        <div id="logslide" style="height: 1050px">
+            <div class="sec" style="float:left; width:100%; height:350px" >
+				<button class="back"><a href="final.html" >&#10094;</a></button>
+				<div id="contact"> 
+					<h3>Kolkata Street Food</h3>
+					Search by<select>
+					  <option value="Name"> Name</option>
+					  <option value="like">Like</option>
+					</select>
+					<input type="text" id="srch" ng-model="fd">
+				</div>
+				<div id="foodlist">
+					<table>
+						<th>No</th>
+						<th>Name</th>
+						<th>image</th>
+						<th>Info</th>
+						<th></th>
+						<tr ng-repeat="h in food |filter:fd">
+							<td>{{$index+1}}.</td>
+							<td>{{h.name}}</td>
+							<td><img ng-src={{h.photo}} height="300px" width="450px"></td>
+							<td>{{h.info}}</td>
+							<td id="f_like">{{h.like}}</td>
+							<td><input type="button" class ="fbtn" value='like'ng-click="increment_like(h)"></td>
+						
+						</tr>
+					</table>
+				</div>
+				
+			</div>
+			
+			</div>
+
+     </div>
+    </body>
+</html>

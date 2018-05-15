@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #sld{
+            position: relative;
+            
+            background-color:red;
+            width:876px;
+            height:450px;
+            
+            }
+             .images{
+                float:left;
+                position: absolute;
+                height:100%;
+                 width:100%;
+				 overflow: hidden;
+            }
+            .btn{
+                position: absolute;
+                height:50px;
+                width:50px;
+                border-style: none;
+                font-weight: bold;
+                font-size: 20px;
+                background-color: black;
+                color:white;
+                border-radius: 50px;
+                top:calc(450px/2);
+                
+            }
+            .btn:hover{
+                box-shadow: 0px 15px 10px 2px white;
+            }
+            #btnr{
+                position: relative;
+                float:right;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        <div id="sld">
+            <img src="../image/Slides/slide0.jpg" class="images" >
+            <img src="../image/Slides/slide1.jpg" class="images" >
+            <img src="../image/Slides/slide2.jpg" class="images" >
+            <img src="../image/Slides/slide3.jpg" class="images" >
+            <img src="../image/Slides/slide4.jpg" class="images" >
+            <img src="../image/Slides/slide5.jpg" class="images" >
+			<img src="../image/Slides/slide6.jpg" class="images">
+			<img src="../image/Slides/slide7.jpg" class="images">
+			<img src="../image/Slides/slide8.jpg" class="images">
+			<img src="../image/Slides/slide9.jpg" class="images">
+            <button class='btn'id="btnl" onclick="slideshowpl(-1)">&#10096;</button>    
+            <button class='btn'id="btnr" onclick="slideshowpl(1)">&#10095;</button>
+        </div>
+    </body>
+    <script>
+        var index=1;
+		function slideshowpl(n){
+			index=index+n;
+			slideshow(index);
+		}
+        slideshow(1);
+        function slideshow(n){
+            var i,j;
+        	var x = document.getElementsByClassName("images");
+            if(n > x.length){index=1;}
+            if(n<1){index=x.length;}
+            for(i=1;i<x.length;i++){
+                x[i].style.display = "none";
+            	}
+			j=index-1;
+			x[j].style.display = "block";
+			}
+		autoslide();
+		function autoslide(){
+			var i,j;
+			
+			var x = document.getElementsByClassName("images");
+			for(i=1;i<x.length;i++){
+                x[i].style.display = "none";
+            }
+			j=index-1;
+			x[j].style.display="block";
+			
+			if(index >= x.length){index=0;}
+			index=index+1;
+			setTimeout(autoslide,2000);
+		}
+		</script>
+</html>

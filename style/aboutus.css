@@ -1,0 +1,59 @@
+.sec{
+	float:left;
+	width:100%;
+	height:350px;
+}
+.sec>.back{
+	position: fixed;
+	margin-top:100px;
+	margin-left:10px;
+	height:60px;
+	width:60px;
+	color:white;
+	border: none;
+	border-radius: 50%;
+	font-size: 30px;
+	background-color: black;
+	top:10px;
+}
+.sec>.back:hover{
+	box-shadow: 2px 2px 2px 2px aqua;
+}
+.sec>.back>a{
+	color:white;
+	text-decoration: none;
+}
+.sec>.back>a:hover{
+	font-size: 35px;
+}
+.personalinfo{
+	background-color:rgba(0,0,0,.8);
+	margin-left: 35px;
+	margin-bottom: 10px;
+	padding:15px;
+	font-size:15px;
+	color:black;
+	font-family: sans-serif;
+	float:left;
+	height:330px;
+	width:400px;
+	border: 1px solid #BFBFBF;
+    box-shadow: 8px 8px 5px #aaaaaa;
+
+	
+}
+.personalinfo>.personalpic{
+	margin-left:133px;
+	height:100px;
+	width:100px;
+	border-radius: 50%;
+	
+}
+
+.personalinfo>.prsn{
+	padding:5px;
+	font-size:12px;
+	color:white;
+	font-family: sans-serif;
+	text-align: center;
+}

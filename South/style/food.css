@@ -1,0 +1,41 @@
+body{
+	background-image: none;
+}
+#foot{
+	float:left;
+	height: 70px;
+	width: 100%;
+	
+}
+#contact{
+	padding-top:0px;
+	float:left;
+	height:150px;
+	width:100%;
+	margin-left:0px;
+	color:firebrick;
+	font-size: 20px;
+	font-family:serif; 
+	text-align: center;
+	font-weight: bold;
+}
+#contact>h3{
+	color:black;
+	font-size: 35px;
+}
+#foodlist{
+	float:left;
+	width:100%;
+	height:auto;
+}
+#foodlist>table,th,td{
+	border:none;
+	border-collapse: collapse;
+	font-size: 20px;
+	font-family: serif;
+	margin-left: 5px;
+	
+}
+td{
+	padding-left:10px;
+}

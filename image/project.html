@@ -1,0 +1,55 @@
+<html>
+<head>
+   <script src = "angular.min.js"></script>
+  <script src = "project.js"></script>
+    
+  <link rel="stylesheet" type="text/css" href="project.css">
+</head>
+ <body ng-app="mymodule">
+    <div ng-controller="myctrl">
+     
+     
+      <div class="gal"> <h1><u>Gallery</u></h1> </div> 
+           <nav class="nav">
+ <ul class="nav-list">
+    <li class="nav-item"><a href="north.html">North Zone</a></li>
+    <li class="nav-item"><a href="south.html">South Zone</a></li>
+    <li class="nav-item"><a href="food.html">Food</a></li>
+    <li class="nav-item"><a href="tourist.html">Tourist Places</a></li>
+    <li class="nav-item"><a href="mall.html">Malls</a></li>
+    <li class="nav-item"><a href="museum.html">Museums</a></li>
+     <li class="nav-item"><a href="culture.html">Different Cultures</a></li>
+    <li class="nav-item"><a href="theatre.html">Theatre</a></li>
+     <li class="nav-item"><a href="religious.html">Diferent Religious Places</a></li>
+    <li class="nav-item"><a href="park.html">Park</a></li>
+     <li class="nav-item"><a href="ghat.html">Ghat</a></li>
+    <li class="nav-item"><a href="festival.html">Festivals</a></li>
+  </ul>
+</nav>  
+    </br>
+</br>
+     
+  
+     
+       <ul ng-repeat="x in gallery">
+    <li>
+      {{x.area}} 
+      <ul>
+           <li>
+           <a target="_blank" ><img ng-src="{{x.image}}" width="800" height="330" /></a>
+          </li>
+          <li>
+                {{x.about}}  
+          </li>
+          <li>
+                {{x.likes}} 
+          </li>
+         <span>
+             <input type="button" value="Like" ng-click="incrementLikes(x)">
+          </span>
+      </ul> 
+    </li>
+</ul>
+     </div>
+    </body>
+</html>

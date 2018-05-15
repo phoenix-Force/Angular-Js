@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="angular.min.js"></script>
+		<script src="angular-route.min.js"></script>
+       
+		<style>
+            
+                 body {
+         background: url("bg_image.jpg") no-repeat center fixed;
+         background-size: cover;
+          
+        }
+            
+			.s_srchbar{
+				margin-right: 0px;
+				float: right;
+				width:100%;
+				height:60px;
+			}
+			.s_pic{
+				float:right;
+				width:85%;
+				height: 600px;
+				background: transparent;
+				
+				
+			}
+			.s_list{
+				float:right;
+				width:15%;
+				height:600px;
+				background-color: rgba(0,0,0,.8);
+				color:black;
+			}
+			.s_southkol{
+				float: right;
+				margin-right: 30%;
+				width: 30%;
+				height: 100%;
+				padding-bottom: 15px;
+		
+			}
+			.s_srch{
+				margin-left: 15%;
+				float: left;
+				width: 20%;
+				height: 100%;
+				padding-top: 30px;
+			}
+			.s_table{
+				width: 100%;
+				height: 100%;
+			}
+			td,tr{
+				border: 1px solid black;
+				border-collapse: collapse;
+				text-align: center;
+				font-size: 15px;
+				font-family: cursive;
+                color: blue;
+			}
+            .fa {
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+body{
+    background-color: darkgray;
+    background-size: cover;
+    font-family:cursive;
+    color:black;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: 15px;
+            }
+            h1{
+                text-align: center;
+                text-decoration-style: wavy;
+                
+              }
+            
+		</style>
+        
+         <h1 style="color:solid black;font-family:cursive"><marquee>A wonderful way to explore North Kolkata </marquee></h1>
+        
+        <u><h1>North Zone:</h1></u>
+                <p style="font-size: 20px">North Kolkata is where old kolkata resides,in it's full glory.The charming district is dotted with closely set lanes and hundreds of old world buildings.Comprising of areas like Belgachhia,Shyambazar,Chitpur,Shobhabazar,Maniktala,Jora sanko,College street etc,the area acts as a major commercial as well as a residential centre of the town.Also situated here is the Sealdah station,one of largest train hubs in India, and the newly build Kolkata station </p>
+	</head>
+	<body ng-app="myApp" ng-controller="con1">
+		
+        
+        <div class="s_srchbar">
+			<div class="s_southkol">
+
+			</div>
+			
+		</div>
+		<div class="s_pic" ng-view>
+			
+		</div>
+		<div class="s_list">
+			<table class="s_table">
+			<th>Places</th>
+				<tr ng-repeat="x in s_list"><td><a href="#!{{x.name}}">{{x.name}}</a></td></tr>
+			</table>
+		</div>
+	
+	<script>
+		var app = angular.module("myApp", ["ngRoute"]);
+			app.config(function($routeProvider) {
+			$routeProvider
+			.when("/TOURIST PLACES", {
+				template : "<div><h1><u>INDIAN MUSEUM</u></h1><img ng-src=\"img/indian.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><h3 style=\"padding-left:10px;margin-left:20px;color:white;\"><span>The history of the origin and the growth of the Indian Museum is one of the remarkable events towards the development of heritage and culture of India.</br>Founded in 1814 at the cradle of the Asiatic Society of Bengal (at the present building of the Asiatic Society, 1 Park Street, Kolkata), Indian Museum is the earliest and the largest multipurpose Museum not only in the Indian subcontinent but also in the Asia-Pacific region of the world.</br>With the foundation of Indian Museum in 1814, the Museum movement started rolling in India and through the years from then, got a new fillip and great momentum. Since then, it has so magnificently developed and culminated into the fruitful existence of more than 400 museums in the country.</br>The movement, which was started in 1814, in fact was the beginning of a significant epoch initiating the socio-cultural and scientific achievements of the country. It is otherwise considered as the beginning of the modernity and the end of mediaeval era. </span></h3></div><div><h1><u>MARBLE PALACE</u></h1><img ng-src=\"img/marble_palace.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><h3 style=\"padding-left:10px;margin-left:20px;color:white;\">Marble Palace is a palatial nineteenth-century mansion in North Kolkata. It is located at 46, Muktaram Babu Street, Kolkata 700007. It is one of the best-preserved and most elegant houses of nineteenth-century Calcutta. The mansion is famous for its marble walls, floors, and sculptures, from which it derives its name.</br>Location: 645, James Long Sarani, Das Para Road, Thakurpukur, Kolkata - 700063 West Bengal.</br><br/>Opening Time: Open from 10:00 till 15:00 every day except Mondays and Thursdays.</h3></div><div><h1><u>VICTORIA MEMORIAL</u></h1><img ng-src=\"img/Victoria_Memorial.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><h3 style=\"padding-left:10px;margin-left:20px;color:white;\">The Victoria Memorial is a large marble building in Kolkata, West Bengal, India, which was built between 1906 and 1921. It is dedicated to the memory of Queen Victoria (1819–1901) and is now a museum and tourist destination under the auspices of the Ministry of Culture. The memorial lies on the maidan (grounds) by the bank of the Hooghly River, near Jawaharlal Nehru road.</br>Open Time: Garden: 5:30 AM to 6:15 PM </br>Gallery: 10:00 AM to 5:00 PM every day, except Monday and national holidays.</br> Cost: Garden: INR 10 </br>Museum - Indians: INR 20 Foreigners: INR 200</br>School children up to 12 years age in uniform and army personnel in uniform: Free.</h3></div><div><h1><u>JORASANKO</u></h1><img ng-src=\"img/Jaroshakho.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><h3 style=\"padding-left:10px;margin-left:20px;color:white;\">Jorasanko is a neighbourhood of north Kolkata, in Kolkata district, West Bengal, India. It is so called because of the two (jora) wooden or bamboo bridges (sanko) that spanned a small stream at this point.</br> Opening timings for Jorasanko Thakur Bari:  Tue, Wed, Fri, Sat, Sun</br>6:00 PM - 6:40 PM (Bengali) (light & sound show from november to january)</br>  7:00 PM - 7:40 PM (English) (light & sound show from november to january)</br>7:00 PM - 7:40 PM (Bengali) (light & sound show from february to june)<br>8:00 PM - 8:40 PM (English) (light & sound show from february to june)</h3></div>"
+			})
+                
+                .when("/TEMPLES", {
+				template : "<div><h1><u>DAKSHINESWAR KALI TEMPLE</u></h1><img ng-src=\"img/kali.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><h3 style=\"padding-left:10px;margin-left:20px;color:white;\">Dakshineswar Kali Temple is a Hindu temple located in Dakshineswar near Kolkata. Situated on the eastern bank of the Hooghly River, the presiding deity of the temple is Bhavatarini, an aspect of Kali, meaning, 'She who liberates Her devotees from the ocean of existence i.e. Saṃsāra'. The temple was built in 1855 by Rani Rashmoni, a philanthropist and a devotee of Kali. The temple is famous for its association with Ramakrishna, a mystic of 19th Century Bengal.</br>The temple compound, apart from the nine-spired main temple, contains a large courtyard surrounding the temple, with rooms along the boundary walls. There are twelve shrines dedicated to Shiva—Kali's companion—along the riverfront, a temple to Radha-Krishna, a bathing ghat on the river, a shrine dedicated to Rani Rashmoni. 'Nahavat-Khana', the chamber in the northwestern corner just beyond the last of the Shiva temples, is where Ramakrishna spent a considerable part of his life..</h3></div><div><h1><u>BELUR MATH</u></h1><img ng-src=\"img/belur.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><h3 style=\"padding-left:10px;margin-left:20px;color:white;\">Beluṛ Maṭh (Bengali: বেলুড় মঠ) is the headquarters of the Ramakrishna Math and Mission, founded by Swami Vivekananda, a chief disciple of Ramakrishna Paramahamsa. It is located on the west bank of Hooghly River, Belur, West Bengal, India and is one of the significant institutions in Calcutta. This temple is the heart of the Ramakrishna Movement. The temple is notable for its architecture that fuses Hindu, Christian and Islamic motifs as a symbol of unity of all religions. In 2007 Belurmath railway station was also inaugurated which is dedicated to Belurmath temple.</br> Open Time: 06:00 AM - 09:00 PM</br> Cost: Free</h3></div><div><h1><u>CALCUTTA JAIN TEMPLE</u></h1><img ng-src=\"img/jain.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><h3 style=\"padding-left:10px;margin-left:20px;color:white;\">Calcutta Jain Temple (also called Parshwanath Temple) is a Jain temple at Badridas Temple Street and a major tourist attraction in Kolkata (Calcutta), India. The temple was built by a Jain named Rai Badridas Bahadoor Mookim in 1867. Pratishtha was done by Sri Kalyansurishwarji Maharaj.</br>The complex is subdivided into 4 temples:</br>•	Shitalnath Ji Temple : Mulnayak : Shitalnath Bhagwan.</br>•	Chandraprabhu Ji temple : Mulnayak : Chandraprabhuswami Bhagwan.</br>•	Mahavir Swami Temple : Mulnayak : Sri Mahavir Swami.</br>•	Dadawadi : Footprints of Jain Acharya Jin Dutt Kushal Suri.</h3></div>"
+                
+            })
+                 
+                .when("/STADIUM", {
+				template :"<div><h1><u>EDEN GARDEN</u></h1><img ng-src=\"img/Eden.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><h3 style=\"padding-left:10px;margin-left:20px;color:white;\">Eden Gardens is a cricket ground in Kolkata, India established in 1864. It is the home venue of the Bengal cricket team and the IPL franchise cricket team Kolkata Knight Riders, and is also a venue for Test, ODI and T20I matches of the India national cricket team.The stadium currently has a capacity of 90,000  Eden Gardens has hosted matches in major international competitions including the World Cup, World Twenty20 and Asia Cup. In 1987, Eden Gardens became the second stadium to host a World Cup final. The 2016 ICC World Twenty20 final was held at the Eden Gardens where the West Indies beat Englandin closely fought encounter.</br>Eden Gardens has also occasionally been used for Association football matches. Through 2017, it has hosted the highest number of International matches in India - 82 that includes 40 Test matches, 31 ODIs and 6 T20Is, 4 Women ODIs and 1 Women T20I.</br>The stadium was established in 1864. The stadium gets its name from the Eden Gardens, one of the oldest parks in Kolkata, adjacent to the stadium, designed in 1841 and named after the Eden sisters of Lord Auckland, the then Governor-General of India. Initially it was named 'Auckland Circus Gardens’ but later changed to 'Eden Gardens' by its makers inspired by Garden of Eden in the Bible. The cricket grounds were built between Babughat and Fort William. The stadium is in the B. B. D. Bagh area of the city, near the State Secretariat and opposite to the Calcutta High Court.</br>The first recorded Test at the venue was held in 1934 between England and India, its first One Day International in 1987 between India and Pakistan and its first T20 international in 2011 between India and England. The Hero Cup semi final featuring India and South Africa was the first Day/Night match. The match recorded 145,367 considered as the biggest attendance for any sports event which held in India.</h3></div>"
+            
+            
+            })
+                             
+                .when("/OTHERS", {
+				template :"<div><h1><u>BURRABAZAR</u></h1><img ng-src=\"img/burrabazar.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><h3 style=\"padding-left:10px;margin-left:20px;color:white;\">Burrabazar (also spelt Bara Bazar) is a neighbourhood of central Kolkata, earlier known as Calcutta, in Kolkata district in the Indian state of West Bengal. Burrabazar expanded from a yarn and textile market into the commercial nucleus of Kolkata and one of the largest wholesale markets in India.</br>Burrabazar expanded from a yarn and textile market into one of the largest wholesale markets in India. Burrabazar is divided into highly specialised sub-markets, according to the commodity it deals in – Dhotipatti, Fancypatti, Tulapatti, Chinipatti etc. Further subdivisions are katra, chowk or kothi. A popular saying goes, “Anything and everything is available at Burrabazar. Even the tiger's eye is available here if you pay the right price.” Each katra (market) is known for a particular item. There are approximately 25 katras in Burrabazar. At Raja Katra, which originally belonged to the Maharaja of Bardhaman, most of the shops deal in spices. At Manohar Das Katra it is mostly hardware and textile. Vikram Chand Market and Khangrapatti sell mostly electronic goods and artificial ornaments.</h3></div><div><h1><u>SHOBHABAZAR</u></h1><img ng-src=\"img/rajbari.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><h3 style=\"padding-left:10px;margin-left:20px;color:white;\">Shobhabazar (also spelt Sovabazar) (Bengali: শোভাবাজার) is a neighbourhood of north Kolkata, earlier known as Calcutta, in Kolkata district in the Indian state of West Bengal.</br>Shobhabazar Rajbari (Shobhabazar Royal Palace) is the palace of the Shobhabazar royal family located in the Indian city of Kolkata. Raja Nabakrishna Deb (1737–97), founder of the Shobhabazar Rajbari (at 35), started life modestly but soon amassed considerable wealth in his service to the British, in particular by his role in assisting to topple Siraj ud-Daulah. During his lifetime Raja Nabakrishna Deb built two houses. The building at 35 Raja Nabakrishna Street (known as Shobhabazar Rajbari or \"Baag ola Bari - House with the lions\"), on the northern side of the road, was the one first constructed by him, subsequently inherited by his adopted son from his elder brother Gopimohan and his descendants including his son Radhakanta Deb. The house at 33 Raja Nabakrishna Street (known as Choto Rajbari) was built by him when a son was born to him later in life, and was left to his biological son Rajkrishna and his descendants. </h3></div><div><h1><u>SHYAMBAZAR</u></h1><img ng-src=\"img/Shyambazar.jpg\" width=\"800px\" height=\"400px\" style=\"margin-left:160px;\"><h3 style=\"padding-left:10px;margin-left:20px;color:white;\">Shyambazar is a neighbourhood of north Kolkata, earlier known as Calcutta, in Kolkata district in the Indian state of West Bengal. The area, under Shyampukur police station of Kolkata Police,[1] has been, along with neighbouring Bagbazar, the citadel of the Bengali aristocracy, in a part of what was earlier known as Sutanuti.</br>Shyambazar broadly covers Ward Nos. 10, 11 and 12 of Kolkata Municipal Corporation.</br>The Japanese dropped a bomb near Hatibagan market during World War II but it did not explode.</br>Shyambazar is the focal point of shopping in north Kolkata. In fabrics and clothing, it can match College Street-Mahatma Gandhi Road crossing in central Kolkata or Gariahat in south Kolkata. In Jewellery, it can match Bowbazar in central Calcutta or Gariahat in south Kolkata. The once famous house of jewellers, M B Sircar of Shyambazar,Senco Gold, has given way to numerous shops of descendants using variations of the name, all across the city. In sweet meat, the old favourites of Shyambazar are Dwarik Ghosh and Sen Mahasay.In Fariapukur which is an important street connecting Bidhan Sarani and APC road there was once the office of Bichitra Press where Sarat Chandra Chaterjee sometimes visited. Old timers will remember shops such as sweet-meat seller Jalajog or a popular restaurant like Golbari.New shops like that of KC Dass and Aminia Restaurant has also been opened.</h3></div>"
+            })
+			.otherwise({
+				template : "<h1>Nothing</h1><h2 style=\"padding-left:10px;margin-left:20px;color:white;\">Nothing has been selected</h2>"
+			});
+				
+		});
+		function mycon ($scope){
+		$scope.s_list=[{name:"TOURIST PLACES",like:30},				 
+					   {name:"TEMPLES",like:30},
+					   {name:"STADIUM",like:30},
+					   {name:"OTHERS",like:30}];
+			
+		
+       };
+
+		app.controller("con1",mycon);
+		
+	
+	</script>
+    </body>
+</html>

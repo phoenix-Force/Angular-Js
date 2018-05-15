@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head >
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../style/model.css">
+        <link rel="stylesheet" type="text/css" href="../style/styles.css">
+        <link rel="stylesheet" type="text/css" href="../style/foot.css">
+        <link rel="stylesheet" type="text/css" href="../style/slide.css">
+        <link rel="stylesheet" type="text/css" href="../style/log.css">
+		<link rel="stylesheet" type="text/css" href="../style/aboutus.css">
+		<link rel="stylesheet" type="text/css" href="../style/contactus.css">
+        <script src="../script/angular.min.js"></script>
+        <script src="../script/signupOpen.js"></script>
+        <script src="../script/menu.js"></script>
+        <link rel="stylesheet" type='text/css' href="../style/bootstrap.min.css">
+        <script src='../script/bootstrap.min.js'></script>
+		<style>
+			#menus>ul li{
+				float:right;
+			}
+			#menus{
+				top:-15px;
+			}
+		</style>
+    </head>
+    <body ng-app="mod1" ng-controller="con1" id="bdy">
+        
+        <div id="nav">
+                <div id="nv" style="float:left;">
+                   
+                        <abbr title="Home Page"><a href="final.html"><img class="logoclass" src="../image/LOGO.png" width="300px" height="130px" style=" position:absolute;padding-top: 0px; margin-top:0px; overflow: hidden;top:-15px; left:-60px;"></a></abbr>
+					
+				</div>
+					<div id="homologo"style="float:left;">
+						<a href="final.html"><img src="../image/home.png" width="50px" height="50px" style="padding-top: 5px; position:relative; text-align: center; margin-left:200px"></a>
+                    
+			</div>
+			<div id="menus" style="position: relative;">
+                    <ul ng-repeat="x in mnubar">
+                        <li><a href="">{{x.mnu}}</a> <!--</li>-->
+                       <!-- <li><a href="">South</a></li>
+                        <li><a href="">Tourist</a></li>
+                        <li><a href="">Gallery</a>-->
+                            <ul ng-repeat="y in x.submnu">
+                                <li>
+                                    <a href="">{{y.name}}</a>
+                                </li>
+                               <!-- <li><a href="">Audio</a> </li>
+                                <li><a href="">Video</a> </li>-->
+                            </ul>
+                        </li>
+                       <!-- <li><a href="">Food</a>
+                            <ul>
+                                <li><a href="">Resturant</a></li>
+                                <li><a href="">StreetFood</a></li>
+                                <li><a href="">Resturant</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Culture</a></li>-->
+                     </ul>
+                </div>
+            </div>
+        <div>
+        <div id="logslide" style="height: 1050px">
+            <div class="sec" style="float:left; width:100%; height:650px;background-color: red;" >
+				<button class="back"><a href="final.html" >&#10094;</a></button>
+				<div id='contact'>
+				<p>If Any Qurey Occurs Feel Free To Contact Us </p>
+				Reach Us:<p>Salt Lake, Kolkata: SDF Building, Module #132, Ground Floor, Salt Lake City, GP Block, Sector V, Kolkata, West Bengal 700091.</p>
+				Email:<p>@gmail.com</p>
+				TollFree No:<p>123456</p>;
+				</div>
+			
+			</div>
+			</div>
+     </div>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head >
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+		<script src="../script/angular-route.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../style/model.css">
+        <link rel="stylesheet" type="text/css" href="../style/styles.css">
+        <link rel="stylesheet" type="text/css" href="../style/foot.css">
+        <link rel="stylesheet" type="text/css" href="../style/slide.css">
+        <link rel="stylesheet" type="text/css" href="../style/log.css">
+		<link rel="stylesheet" type="text/css" href="../style/aboutus.css">
+        <script src="../script/angular.min.js"></script>
+        <script src="../script/signupOpen.js"></script>
+        <script src="../script/menu.js"></script>
+        <link rel="stylesheet" type='text/css' href="../style/bootstrap.min.css">
+        <script src='../script/bootstrap.min.js'></script>
+		<style>
+			#menus>ul li{
+				float:right;
+			}
+			#menus{
+				top:-15px;
+			}
+		</style>
+    </head>
+    <body ng-app="mod1" ng-controller="con1" id="bdy">
+        
+        <div id="nav">
+                <div id="nv" style="float:left;">
+                   
+                        <abbr title="Home Page"><a href="final.html"><img class="logoclass" src="../image/LOGO.png" width="300px" height="130px" style=" position:absolute;padding-top: 0px; margin-top:0px; overflow: hidden;top:-15px; left:-60px;"></a></abbr>
+					
+				</div>
+					<div id="homologo"style="float:left;">
+						<a href="final.html"><img src="../image/home.png" width="50px" height="50px" style="padding-top: 5px; position:relative; text-align: center; margin-left:200px"></a>
+                    
+			</div>
+			<div id="menus" style="position: relative;">
+                    <ul ng-repeat="x in mnubar">
+                        <li><a href="">{{x.mnu}}</a> <!--</li>-->
+                       <!-- <li><a href="">South</a></li>
+                        <li><a href="">Tourist</a></li>
+                        <li><a href="">Gallery</a>-->
+                            <ul ng-repeat="y in x.submnu">
+                                <li>
+                                    <a href="">{{y.name}}</a>
+                                </li>
+                               <!-- <li><a href="">Audio</a> </li>
+                                <li><a href="">Video</a> </li>-->
+                            </ul>
+                        </li>
+                       <!-- <li><a href="">Food</a>
+                            <ul>
+                                <li><a href="">Resturant</a></li>
+                                <li><a href="">StreetFood</a></li>
+                                <li><a href="">Resturant</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Culture</a></li>-->
+                     </ul>
+                </div>
+            </div>
+        <div>
+        <div id="logslide" style="height:660px;backgroud-color:red;"ng-include="'../Indrani/South.html'">
+            
+		</div>
+        
+        <div id="footer">
+            <div id="menu">
+				
+				<ul ng-repeat="menulist in footermenu">
+					<li><a href={{menulist.page}}>{{menulist.nme}}</a></li>
+				</ul>
+				
+                <!--<ul>
+                    <li><a href="final.html">Home</a></li>
+                    <li><a>Help</a></li>
+                    <li>About Us</li>
+                    <li>About Project</li>
+                    <li><a href="http://www.ardentcollaborations.com" target="_blank">About Ardent</a></li>
+                </ul>-->
+            </div>
+            <div ng-include="''" style="background-color: red;width: 100%;height: ">
+            
+            </div>
+            <div id="back">
+                <p id="feedp">Feedback</p>
+                Name*<input type="text" id="msgname"><br>
+                Email*<input type="email" id="msgmail"><br>
+                Message*<textarea cols="33" rows="2" id="msg" id="textarea"></textarea><br>
+                <input type="submit" id="btn" value="Submit" onclick="put()">
+            </div>
+            <div id="about">
+                <h2><a href="" id="us">Contact Us</a></h2>
+                <h5>Like Us / Join Us</h5>
+               <div id="media">
+                    <div class="box" id="facebook"><a href="https://www.facebook.com/login" target="_blank">&#62220;</a></div>
+                    <div class="box" id="twiter"><a href="https://twitter.com/login">&#62217;</a></div>
+                    <div class="box" id="google"><a href="https://plus.google.com/117302453758282711096">&#62223;</a></div>
+                    <div class="box" id="insta"><a href="https://www.instagram.com/?hl=en">&#62253;</a></div>
+                
+                </div>
+            </div>
+            <div id="mark">
+                <marquee style="font-family:sans-serif;font-size:25;font-weight: 100;padding-top: 20px;">Ardent ComputerTech,BF 88,AngularJs</marquee>
+            </div>
+        </div>
+     </div>
+    </body>
+</html>

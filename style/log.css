@@ -1,0 +1,100 @@
+#container{
+    
+    
+}
+.logbox{
+	float: left;
+	position: relative;
+    padding:80px 40px;
+    margin-left: 4%;
+    margin-top: 3%;
+    position: absolute;
+    height:411px;
+    width:350px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.5);
+}
+#logimage{
+    position: absolute;
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    top:-30px;
+    left:calc(50% - 50px);
+}
+.logh{
+    margin: 0;
+    padding: 0px 0px 20px;
+    color:#efed40;
+    text-align: center;
+}
+.logp{
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    color:white;
+}
+.logbox input{
+    width:100%;
+    margin-bottom: 20px;
+}
+.logbox input[type="text"],
+.logbox input[type="password"]{
+    border:none;
+    border-bottom: 1px solid #fff;
+    background:transparent;
+    outline: none;
+    height:40px;
+    color:white;
+    
+}
+::placeholder{
+    color:rgba(255,255,255,.5);
+}
+.logbox input[type="submit"]{
+    background-color: #2196f3;
+    border:none;
+    margin: 0px;
+    height:30px;
+    font-size: 16px;
+    color:white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.logbox input[type="submit"]:hover{
+    background-color: forestgreen;
+    opacity: .5;
+}
+.logbox a{
+    color:white;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: right;
+    float: right;
+}
+.logbox a:hover{
+    color:yellow;
+    font-style: normal;
+    text-decoration: underline;
+    font-size: 14px;
+    
+    
+}
+.logbox input[type="button"]{
+    margin-top: 20px;
+    border:none;
+    margin: 0px;
+    height:30px;
+    font-size: 16px;
+    color:white;
+    cursor: pointer;
+    background-color:darkred;
+    border-radius: 20px;
+    
+}
+.logbox input[type="button"]:hover{
+    background-color: darkred;
+    opacity: .5;
+}
+
